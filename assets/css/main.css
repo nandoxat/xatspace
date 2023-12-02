@@ -271,12 +271,41 @@ a {
 }
 
 .loading > .icon {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
+    fill: none;
 }
 
 .loading > .icon > svg {
     width: auto;
+}
+
+.loading > .icon > svg > path {
+    fill: var(--text-color-primary);
+    animation: loadingAnimation 2s infinite;
+}
+
+.loading > .icon > svg > path:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.loading > .icon > svg > path:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.loading > .icon > svg > path:nth-child(3) {
+    animation-delay: 1s;
+}
+
+/* ========== ANIMATIONS STYLE ========== */
+
+@keyframes loadingAnimation {
+    25% {
+        fill: var(--color-primary-out);
+    }
+    0%, 75%, 100% {
+        fill: var(--text-color-primary);
+    }
 }
 
 /* ========== NAV STYLE ========== */

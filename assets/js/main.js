@@ -5,7 +5,9 @@
 
 // Loading
 $(window).on('load', function(){
-    $('.loading').fadeOut(300);
+    setTimeout(function(){
+        $('.loading').fadeOut(300);
+    }, 1000);
 });
 
 // Write Data
