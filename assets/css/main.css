@@ -1,0 +1,892 @@
+/*!
+ * Xatspace Twitter v3
+ * Designer & Programmer by Nando (10042001) - www.nandocosta.com.br
+ */
+
+@import 'font-twitter.css';
+ 
+/* ========== GENERAL STYLE ========== */
+ 
+:root {
+	--font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
+    --font-secondary: "TwitterChirp", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
+	--bg-color: #FFF;
+	--color-primary: #1D9BF0;
+    --color-primary-out: #1A8CD8;
+	--color-secondary: #FF9900;
+	--text-color-primary: #000;
+    --text-color-primary-out: #0F1419;
+	--text-color-secondary: #536471;
+    --border-color: #EFF3F4;
+}
+
+/* @media (prefers-color-scheme: dark){
+    :root {
+        --bg-color: #000;
+        --text-color-primary-out: #E7E9EA;
+    }
+} */
+
+body {
+	background-color: var(--bg-color);
+	font-family: var(--font-primary);
+	font-size: 1rem;
+	line-height: inherit;
+	color: var(--text-color-primary);
+	margin: 0;
+	padding: 0;
+}
+
+body.view-modal {
+	overflow: hidden;
+}
+
+* {
+	font-family: var(--font-primary);
+	box-sizing: border-box;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+}
+
+:-webkit-input-placeholder {
+	color: var(--text-color-secondary);
+}
+
+:-moz-input-placeholder {
+	color: var(--text-color-secondary);
+}
+
+:-ms-input-placeholder {
+	color: var(--text-color-secondary);
+}
+
+:-o-input-placeholder {
+	color: var(--text-color-secondary);
+}
+
+::placeholder {
+	color: var(--text-color-secondary);
+}
+
+select:invalid {
+	color: var(--text-color-secondary);
+}
+
+a {
+	color: var(--text-color-primary);
+	text-decoration: none;
+}
+
+.content {
+	position: relative;
+	width: 1255px;
+	margin: 0 auto;
+}
+
+[class*="col-"] {
+	float: left;
+	padding: 0 1.25rem;
+}
+
+.btn {
+    background: #BBB;
+    width: auto;
+    float: left;
+    margin: 0;
+    padding: 16px 32px;
+    font-family: var(--font-secondary);
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+    color: var(--text-color-primary);
+    line-height: 20px;
+    border: 0;
+    border-radius: 40px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: #FFF;
+}
+
+.btn-primary:hover {
+    background: var(--color-primary-out);
+}
+
+.btn-edit {
+    background: transparent;
+    padding: 7px 16px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-color-primary);
+    border: 1px solid #CFD9DE;
+}
+
+.btn-edit:hover {
+    background: rgba(15, 20, 25, 0.1);
+}
+
+.general {
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+aside {
+    position: relative;
+    width: 380px;
+    height: 100vh;
+    float: left;
+    margin: 0;
+    padding: 0 0 0 30px;
+}
+
+.icon {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    width: 26px;
+    height: 26px;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.icon.verified {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    float: none;
+    margin: -2px 0 0 -2px;
+    vertical-align: middle;
+}
+
+.icon > svg {
+    width: 100%;
+    height: 100%;
+    float: left;
+    fill: var(--text-color-primary);
+}
+
+.icon.verified > svg {
+    fill: #1D9BF0;
+}
+
+.icon-home {
+    background-image: url(../images/icons/home.svg);
+}
+
+.icon-search {
+    background-image: url(../images/icons/search.svg);
+}
+
+.icon-notifications {
+    background-image: url(../images/icons/notifications.svg);
+}
+
+.icon-messages {
+    background-image: url(../images/icons/messages.svg);
+}
+
+.icon-list {
+    background-image: url(../images/icons/list.svg);
+}
+
+.icon-save {
+    background-image: url(../images/icons/save.svg);
+}
+
+.icon-premium {
+    background-image: url(../images/icons/premium.svg);
+}
+
+.icon-profile {
+    background-image: url(../images/icons/profile.svg);
+}
+
+.icon-profile-active {
+    background-image: url(../images/icons/profile-active.svg);
+}
+
+.icon-more {
+    background-image: url(../images/icons/more.svg);
+}
+
+.icon-back {
+    background-image: url(../images/icons/back.svg);
+}
+
+.icon-verified {
+    display: inline-block;
+    background-image: url(../images/icons/verified.svg);
+    width: 20px;
+    height: 20px;
+    float: none;
+    margin: 0 0 0 2px;
+    vertical-align: middle;
+}
+
+.icon-office {
+    background-image: url(../images/icons/office.svg);
+}
+
+.icon-location {
+    background-image: url(../images/icons/location.svg);
+}
+
+.icon-website {
+    background-image: url(../images/icons/website.svg);
+}
+
+.icon-balloon {
+    background-image: url(../images/icons/balloon.svg);
+}
+
+.icon-calendar {
+    background-image: url(../images/icons/calendar.svg);
+}
+
+/* ========== NAV STYLE ========== */
+
+nav {
+    position: fixed;
+    width: 275px;
+    height: 100vh;
+    top: 0;
+    float: left;
+    margin: 0;
+    padding: 0 8px;
+}
+
+nav > header {
+    width: 100%;
+    height: 56px;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+nav > header > .logo {
+    background-color: transparent;
+    background-image: url(../images/xat.svg);
+    background-repeat: no-repeat;
+    background-size: auto 30px;
+    background-position: center center;
+    width: 52px;
+    height: 52px;
+    float: left;
+    margin: 2px 0;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+
+nav > header > .logo:hover {
+    background-color: rgba(15, 20, 25, 0.1);
+}
+
+nav > ul {
+    width: 100%;
+    float: left;
+    margin: 2px 0 4px;
+    padding: 0;
+    list-style: none;
+}
+
+nav > ul > li {
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+nav .link {
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 4px 0;
+}
+
+nav .button {
+    background-color: transparent;
+    width: auto;
+    float: left;
+    margin: 0;
+    padding: 12px;
+    font-family: var(--font-secondary);
+    font-size: 20px;
+    border: 0;
+    border-radius: 30px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    transition: background-color 0.2s;
+}
+
+nav .link:hover .button {
+    background-color: rgba(15, 20, 25, 0.1);
+}
+
+nav .link.active .button {
+    font-weight: 700;
+}
+
+nav .button > span {
+    float: left;
+    margin: 1px 16px 1px 20px;
+    padding: 0;
+    font-family: inherit;
+}
+
+nav .btn {
+    width: 90%;
+    margin: 20px 0 0;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* ========== MAIN STYLE ========== */
+
+main {
+	position: relative;
+	width: 100%;
+    max-width: 600px;
+    /* height: 2000px; */
+    min-height: 100vh;
+	float: left;
+    margin: 0;
+    margin-left: 275px;
+    padding: 0;
+    border: 0;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-color: var(--border-color);
+    z-index: 0;
+}
+
+main .profile-head {
+    display: flex;
+    position: sticky;
+    background: rgba(255, 255, 255, 0.85);
+    width: 100%;
+    height: 53px;
+    float: left;
+    top: 0;
+    margin: 0;
+    padding: 0 16px 0 8px;
+    -webkit-backdrop-filter: blur(12px);
+    -moz-backdrop-filter: blur(12px);
+    -ms-backdrop-filter: blur(12px);
+    -o-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    align-items: center;
+    z-index: 1;
+}
+
+main .profile-head > .icon {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    margin: 0;
+    border: 0;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+main .profile-head > .icon:hover {
+    background-color: rgba(15, 20, 25, 0.10);
+}
+
+main .profile-head > .icon > svg {
+    width: 20px;
+    height: 20px;
+}
+
+main .profile-head > .infos {
+    width: calc(100% - 36px);
+    float: left;
+    margin: 0;
+    padding: 0 0 0 28px;
+}
+
+main .profile-head > .infos > .title {
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-secondary);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-color-primary-out);
+}
+
+main .profile-head > .infos > .desc {
+    width: 100%;
+    float: left;
+    margin: 3px 0 0;
+    padding: 0;
+    font-family: var(--font-secondary);
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--text-color-secondary);
+}
+
+main .profile-data {
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+main .profile-data > .cover {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    float: left;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+main .profile-data > .cover:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    float: left;
+    top: 0;
+    left: 0;
+}
+
+main .profile-data > .cover > img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    object-position: center center;
+}
+
+main .profile-data > .infos {
+    position: relative;
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 12px 16px 16px;
+}
+
+main .profile-data > .infos > .picture {
+    position: relative;
+    width: 25%;
+    float: left;
+    margin: -15% 0 0;
+    padding: 0;
+    border: 4px solid var(--bg-color);
+    border-radius: 50%;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+main .profile-data > .infos > .picture:after {
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    float: left;
+    top: 0;
+    left: 0;
+    transition: background-color 0.2s;
+}
+
+main .profile-data > .infos > .picture:hover:after {
+    background-color: rgba(26, 26, 26, 0.15);
+}
+
+main .profile-data > .infos > .picture > img {
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+main .profile-data > .infos > .btn {
+    float: right;
+}
+
+main .profile-data > .infos > .bottom {
+    width: 100%;
+    float: left;
+    margin: 16px 0 0;
+    padding: 0;
+}
+
+main .profile-data > .infos > .bottom > .title {
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-secondary);
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-color-primary-out);
+}
+
+main .profile-data > .infos > .bottom > .desc {
+    width: 100%;
+    float: left;
+    margin: 3px 0 0;
+    padding: 0;
+    font-family: var(--font-secondary);
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--text-color-secondary);
+}
+
+main .profile-data > .infos > .bottom > .resume {
+    width: 100%;
+    float: left;
+    margin: 18px 0 0;
+    padding: 0;
+    font-family: var(--font-secondary);
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--text-color-primary-out);
+    line-height: 20px;
+}
+
+main .profile-data > .infos > .bottom > .resume > .emoji {
+    width: 18px;
+    height: 18px;
+    margin: 0 1px;
+    padding: 0;
+    object-fit: contain;
+    object-position: center center;
+    vertical-align: middle;
+}
+
+main .profile-data > .infos > .bottom > .data {
+    width: 100%;
+    float: left;
+    margin: 12px 0 0;
+    padding: 0;
+}
+
+main .profile-data > .infos > .bottom > .data > .item {
+    float: left;
+    margin: 0 12px 0 0;
+    padding: 0;
+    font-family: var(--font-secondary);
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+    color: var(--text-color-secondary);
+}
+
+main .profile-data > .infos > .bottom > .data > a.item {
+    color: var(--color-primary);
+}
+
+main .profile-data > .infos > .bottom > .data > a.item:hover {
+    text-decoration: underline;
+}
+
+main .profile-data > .infos > .bottom > .data > .item > .icon {
+    width: 18px;
+    height: 18px;
+    margin: 0 4px 0 0;
+}
+
+main .profile-data > .infos > .bottom > .data > .item > .icon > svg {
+    fill: var(--text-color-secondary);
+}
+
+main .profile-data > .infos > .bottom > .stats {
+    width: 100%;
+    float: left;
+    margin: 12px 0 0;
+    padding: 0;
+}
+
+main .profile-data > .infos > .bottom > .stats > .item {
+    width: auto;
+    float: left;
+    margin: 0 20px 0 0;
+    padding: 0;
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-color-secondary);
+    line-height: 16px;
+}
+
+main .profile-data > .infos > .bottom > .stats > .item:last-child {
+    margin: 0;
+}
+
+main .profile-data > .infos > .bottom > .stats > .item > b {
+    font-family: inherit;
+    color: var(--text-color-primary-out);
+}
+
+main .posts {
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+main .posts > .posts-head {
+    display: flex;
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-bottom: 1px solid;
+    border-color: var(--border-color);
+}
+
+main .posts > .posts-head > .item {
+    display: flex;
+    background-color: transparent;
+    float: left;
+    margin: 0;
+    padding: 16px;
+    font-family: var(--font-secondary);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-color-secondary);
+    line-height: 21px;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+main .posts > .posts-head > .item:hover {
+    background-color: rgba(15, 20, 25, 0.10);
+}
+
+main .posts > .posts-head > .item.active {
+    font-weight: 700;
+    color: var(--text-color-primary-out);
+}
+
+main .posts > .posts-head > .item > span {
+    position: relative;
+    font-family: inherit;
+    float: left;
+}
+
+main .posts > .posts-head > .item > span:before {
+    content: "";
+    position: absolute;
+    background-color: var(--color-primary);
+    width: calc(100% + 16px);
+    height: 4px;
+    float: left;
+    left: -8px;
+    bottom: -15px;
+    border: 0;
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+main .posts > .posts-head > .item.active > span:before {
+    opacity: 1;
+}
+
+main .posts > .posts-body {
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+main .posts > .posts-body > .item {
+    background-color: transparent;
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 12px 16px;
+    border: 0;
+    border-bottom: 1px solid;
+    border-color: var(--border-color);
+    transition: background-color 0.2s;
+}
+
+main .posts > .posts-body > .item:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+main .posts > .posts-body > .item > .picture {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+main .posts > .posts-body > .item > .picture > img {
+    width: 100%;
+    height: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    object-position: center center;
+}
+
+main .posts > .posts-body > .item > .picture:after {
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    float: left;
+    top: 0;
+    left: 0;
+    transition: background-color 0.2s;
+}
+
+main .posts > .posts-body > .item > .picture:hover:after {
+    background-color: rgba(26, 26, 26, 0.15);
+}
+
+main .posts > .posts-body > .item > .texts {
+    width: calc(100% - 40px);
+    float: left;
+    margin: 0;
+    padding: 0 0 0 16px;
+}
+
+main .posts > .posts-body > .item > .texts > .infos {
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+    color: var(--text-color-secondary);
+    line-height: 20px;
+}
+
+main .posts > .posts-body > .item > .texts > .infos > b {
+    color: var(--text-color-primary-out);
+}
+
+main .posts > .posts-body > .item > .texts > .resume {
+    width: 100%;
+    float: left;
+    margin: 4px 0 0;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+    color: var(--text-color-primary-out);
+    line-height: 20px;
+}
+
+main .posts > .posts-body > .item > .texts > .resume > p {
+    width: 100%;
+    float: left;
+    margin: 0 0 16px;
+    padding: 0 14px 0 0;
+}
+
+main .posts > .posts-body > .item > .texts > .resume > p:last-of-type {
+    margin: 0;
+}
+
+main .posts > .posts-body > .item > .texts > .resume > .links {
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+main .posts > .posts-body > .item > .texts > .resume > .links > a {
+    float: left;
+    margin: 0 4px 0 0;
+    padding: 0;
+    color: var(--color-primary);
+}
+
+main .posts > .posts-body > .item > .texts > .resume > .links > a:hover {
+    text-decoration: underline;
+}
+
+main .posts > .posts-body > .item > .texts > .resume > .image {
+    position: relative;
+    width: 100%;
+    float: left;
+    margin: 12px 0 0;
+    padding: 0;
+    border: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+main .posts > .posts-body > .item > .texts > .resume > .image:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    float: left;
+    top: 0;
+    left: 0;
+}
+
+main .posts > .posts-body > .item > .texts > .resume > .image > img {
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
