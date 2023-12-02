@@ -301,7 +301,7 @@ a {
 
 @keyframes loadingAnimation {
     25% {
-        fill: var(--color-primary-out);
+        fill: var(--color-primary);
     }
     0%, 75%, 100% {
         fill: var(--text-color-primary);
