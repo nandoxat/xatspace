@@ -20,13 +20,6 @@
     --border-color: #EFF3F4;
 }
 
-/* @media (prefers-color-scheme: dark){
-    :root {
-        --bg-color: #000;
-        --text-color-primary-out: #E7E9EA;
-    }
-} */
-
 body {
 	background-color: var(--bg-color);
 	font-family: var(--font-primary);
@@ -49,6 +42,19 @@ body.view-modal {
 	-moz-appearance: none;
 	-o-appearance: none;
 	appearance: none;
+}
+
+* > span {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    color: inherit;
+    line-height: inherit;
+}
+
+.hide {
+    display: none !important;
 }
 
 :-webkit-input-placeholder {
@@ -248,6 +254,31 @@ a {
     background-image: url(../images/icons/calendar.svg);
 }
 
+.loading {
+    display: flex;
+    position: fixed;
+    background: var(--bg-color);
+    width: 100%;
+    height: 100%;
+    float: left;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 9;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading > .icon {
+    width: 60px;
+    height: 60px;
+}
+
+.loading > .icon > svg {
+    width: auto;
+}
+
 /* ========== NAV STYLE ========== */
 
 nav {
@@ -269,11 +300,8 @@ nav > header {
 }
 
 nav > header > .logo {
+    display: flex;
     background-color: transparent;
-    background-image: url(../images/xat.svg);
-    background-repeat: no-repeat;
-    background-size: auto 30px;
-    background-position: center center;
     width: 52px;
     height: 52px;
     float: left;
@@ -281,11 +309,20 @@ nav > header > .logo {
     padding: 0;
     border: 0;
     border-radius: 50%;
+    align-items: center;
+    justify-content: center;
     transition: all 0.2s;
 }
 
 nav > header > .logo:hover {
     background-color: rgba(15, 20, 25, 0.1);
+}
+
+nav > header > .logo > svg {
+    width: auto;
+    height: 30px;
+    float: left;
+    fill: var(--text-color-primary);
 }
 
 nav > ul {

@@ -1,0 +1,99 @@
+{
+    "userinfo": {
+        "id": "10042001",
+        "name": "Fernando Costa",
+        "username": "nando",
+        "posts": 293,
+        "verified": true,
+        "cover": "assets\/images\/profile\/cover.jpg",
+        "picture": "assets\/images\/profile\/picture.jpg",
+        "resume": "Meu nome é Fernando Costa e mais conhecido como Nando, sou desenvolvedor Full-stack. Atualmente, estou trabalhando na área de TI como engenheiro de software. <img alt=\"😆\" draggable=\"false\" src=\"assets\/images\/emoji\/1f606.svg\" class=\"emoji\"><\/div>",
+        "work": "Software Developer\/Programmer\/Software Engineer",
+        "location": "Maceió, Brasil",
+        "website": "https:\/\/nandocosta.com.br",
+        "calendar": "Ingressou em março de 2012",
+        "following": "222",
+        "followers": "12,5 mi"
+    },
+    "posts": [
+        {
+            "date": "02 dez de 2023",
+            "resume": "<p>Algumas curiosidades sobre mim... Já fui programador e designer do <a href=\"https:\/\/xatproject.com\" target=\"_blank\">xatproject.com<\/a> onde auxilei no desenvolvimento de alguns blogs na época como <a href=\"https:\/\/ajuda.xatproject.com\" target=\"_blank\">ajuda.xatproject.com<\/a>, desenvolvi a logotipo do <a href=\"https:\/\/xatproject.com\" target=\"_blank\">xatproject.com<\/a> e também do <a href=\"https:\/\/xatradio.com\" target=\"_blank\">xatradio.com<\/a> que é utilizada até hoje que inicialmente o primeiro projeto seria na cor rosa, depois foi alterada para o azul.<\/p>",
+            "hashtags": [
+                "xatproject",
+                "ajuda",
+                "xat",
+                "designer",
+                "programador"
+            ],
+            "image": "assets\/images\/posts\/print.jpg"
+        },
+        {
+            "date": "01 dez de 2023",
+            "resume": "<p>Em 2018 eu desenvolvi uma primeira versão do xatspace twitter, devido o grande sucesso lancei uma segunda versão e hoje estou quase finalizando a terceira versão baseada no novo perfil do twitter.<\/p>",
+            "hashtags": [
+                "xatspace",
+                "nando",
+                "xat",
+                "lançamento"
+            ]
+        },
+        {
+            "date": "20 nov de 2023",
+            "resume": "<p>Dei uma pausa em minhas atividades no <a href=\"https:\/\/xat.com\" target=\"_blank\">xat.com<\/a> devido a alta demanda e também estava um pouco demotivado com a plataforma, mas hoje acredito que o xat tenha tudo para um grande desempenho.<\/p>"
+        },
+        {
+            "date": "19 nov de 2023",
+            "resume": "<p>Algumas curiosidades sobre mim... Já fui programador e designer do <a href=\"https:\/\/xatproject.com\" target=\"_blank\">xatproject.com<\/a> onde auxilei no desenvolvimento de alguns blogs na época como <a href=\"https:\/\/ajuda.xatproject.com\" target=\"_blank\">ajuda.xatproject.com<\/a>, desenvolvi a logotipo do <a href=\"https:\/\/xatproject.com\" target=\"_blank\">xatproject.com<\/a> e também do <a href=\"https:\/\/xatradio.com\" target=\"_blank\">xatradio.com<\/a> que é utilizada até hoje que inicialmente o primeiro projeto seria na cor rosa, depois foi alterada para o azul.<\/p>",
+            "hashtags": [
+                "xatproject",
+                "ajuda",
+                "xat",
+                "designer",
+                "programador"
+            ]
+        }
+    ],
+    "friends": [
+        {
+            "name": "Fernando Costa",
+            "username": "nando",
+            "verified": true,
+            "picture": "assets\/images\/profile\/picture.jpg"
+        },
+        {
+            "name": "Fernando Costa",
+            "username": "nando",
+            "verified": true,
+            "picture": "assets\/images\/profile\/picture.jpg"
+        },
+        {
+            "name": "Fernando Costa",
+            "username": "nando",
+            "verified": true,
+            "picture": "assets\/images\/profile\/picture.jpg"
+        }
+    ],
+    "chats": [
+        {
+            "name": "Ajuda",
+            "desc": "Obtenha ajuda com xat",
+            "verified": true
+        },
+        {
+            "name": "Loja",
+            "desc": "Global IDs Marketplace",
+            "verified": true
+        },
+        {
+            "name": "Stifler",
+            "desc": "Revendedor de xats",
+            "verified": true
+        },
+        {
+            "name": "TheStore",
+            "desc": "TheStore - Sua compra segura",
+            "verified": true
+        }
+    ]
+}
