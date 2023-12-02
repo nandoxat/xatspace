@@ -11,6 +11,10 @@
 	--font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
     --font-secondary: "TwitterChirp", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
 	--bg-color: #FFF;
+    --bg-color-rgb: 255, 255, 255;
+    --bg-color-out-rgb: 0, 0, 0;
+    --bg-color-logo: 15, 20, 25;
+    --bg-color-box: #F7F9F9;
 	--color-primary: #1D9BF0;
     --color-primary-out: #1A8CD8;
 	--color-secondary: #FF9900;
@@ -18,6 +22,21 @@
     --text-color-primary-out: #0F1419;
 	--text-color-secondary: #536471;
     --border-color: #EFF3F4;
+    --edit-color: #CFD9DE;
+}
+
+@media screen and (prefers-color-scheme: dark){
+    :root {
+        --bg-color: #000;
+        --bg-color-rgb: 0, 0, 0;
+        --bg-color-out-rgb: 255, 255, 255;
+        --bg-color-logo: 239, 243, 244;
+        --bg-color-box: #16181C;
+        --text-color-primary: #E7E9EA;
+        --text-color-primary-out: #E7E9EA;
+        --border-color: #2F3336;
+        --edit-color: #536471;
+    }
 }
 
 body {
@@ -134,11 +153,11 @@ a {
     font-size: 15px;
     font-weight: 700;
     color: var(--text-color-primary);
-    border: 1px solid #CFD9DE;
+    border: 1px solid var(--edit-color);
 }
 
 .btn-edit:hover {
-    background: rgba(15, 20, 25, 0.1);
+    background: rgba(var(--bg-color-logo), 0.1);
 }
 
 .general {
@@ -344,7 +363,7 @@ nav > header > .logo {
 }
 
 nav > header > .logo:hover {
-    background-color: rgba(15, 20, 25, 0.1);
+    background-color: rgba(var(--bg-color-logo), 0.1);
 }
 
 nav > header > .logo > svg {
@@ -395,7 +414,7 @@ nav .button {
 }
 
 nav .link:hover .button {
-    background-color: rgba(15, 20, 25, 0.1);
+    background-color: rgba(var(--bg-color-logo), 0.1);
 }
 
 nav .link.active .button {
@@ -412,7 +431,7 @@ nav .button > span {
 nav .btn {
     width: 90%;
     margin: 20px 0 0;
-    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 28px rgba(var(--bg-color-out-rgb), 0.08);
 }
 
 main {
@@ -434,7 +453,7 @@ main {
 main .profile-head {
     display: flex;
     position: sticky;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(var(--bg-color-rgb), 0.85);
     width: 100%;
     height: 53px;
     float: left;
@@ -463,7 +482,7 @@ main .profile-head > .icon {
 }
 
 main .profile-head > .icon:hover {
-    background-color: rgba(15, 20, 25, 0.10);
+    background-color: rgba(var(--bg-color-out-rgb), 0.1);
 }
 
 main .profile-head > .icon > svg {
@@ -747,7 +766,7 @@ main .posts > .posts-head > .item {
 }
 
 main .posts > .posts-head > .item:hover {
-    background-color: rgba(15, 20, 25, 0.10);
+    background-color: rgba(var(--bg-color-logo), 0.1);
 }
 
 main .posts > .posts-head > .item.active {
@@ -800,7 +819,7 @@ main .posts > .posts-body > .item {
 }
 
 main .posts > .posts-body > .item:hover {
-    background-color: rgba(0, 0, 0, 0.03);
+    background-color: rgba(var(--bg-color-out-rgb), 0.03);
 }
 
 main .posts > .posts-body > .item > .picture {
@@ -1013,7 +1032,7 @@ aside > .search > .button > .icon > svg {
 }
 
 aside > .box {
-    background-color: #F7F9F9;
+    background-color: var(--bg-color-box);
     width: 100%;
     float: left;
     margin: 0 0 16px;
@@ -1052,7 +1071,7 @@ aside > .box > .friends > .item {
 }
 
 aside > .box > .friends > .item:hover {
-    background-color: rgba(0, 0, 0, 0.03);
+    background-color: rgba(var(--bg-color-out-rgb), 0.03);
 }
 
 aside > .box > .friends > .item > .picture {
@@ -1139,6 +1158,7 @@ aside > .box > .friends > .item > .texts > .button {
     right: 0;
     margin: 0;
     padding: 8px 16px;
+    font-family: var(--font-secondary);
     font-size: 14px;
     font-weight: 700;
     text-align: center;
@@ -1165,7 +1185,7 @@ aside > .box > .chats > .item {
 }
 
 aside > .box > .chats > .item:hover {
-    background-color: rgba(0, 0, 0, 0.03);
+    background-color: rgba(var(--bg-color-out-rgb), 0.03);
 }
 
 aside > .box > .chats > .item > .texts > .title {
